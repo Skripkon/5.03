@@ -8,6 +8,7 @@ import javax.media.opengl.GL2;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 /**
  * Класс формы приложения
@@ -92,8 +93,7 @@ public class Form extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 double x = Double.parseDouble(xPointField.getText());
                 double y = Double.parseDouble(yPointField.getText());
-                int setVal = radioButton1.isSelected() ? Point.SET_1 : Point.SET_2;
-                renderer.problem.addPoint(x, y, setVal);
+                renderer.problem.addPoint (x, y);
             }
         });
         randomBtn.addActionListener(new ActionListener() {
@@ -141,6 +141,7 @@ public class Form extends JFrame {
      * @param args аргументы командной строки
      */
     public static void main(String[] args) {
+        //List<Point> lst = new ArrayList<>();
         new Form();
     }
     }

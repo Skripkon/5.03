@@ -3,7 +3,26 @@ import javax.media.opengl.GL2;
 import javax.media.opengl.GL;
 
 public class Triangle {
-    Point p1, p2, p3;
+    /**
+     * p1 - первая точка
+     */
+    Point p1;
+    /**
+     * p2 - вторая точка
+     */
+    Point p2;
+    /**
+     * p3 - третья точка
+     */
+    Point p3;
+
+    /**
+     * Конструктор точки
+     *
+     * @param p1         первая точка
+     * @param p2         вторая точка
+     * @param p3         третья точка
+     */
     public Triangle (Point p1, Point p2, Point p3){
         this.p1 = p1;
         this.p2 = p2;
